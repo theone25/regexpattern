@@ -24,8 +24,7 @@ class RegexPattern {
   /// Must started by either, "0", "+", "+XX <X between 2 to 4 digit>", "(+XX <X between 2 to 3 digit>)"
   /// Can add whitespace separating digit with "+" or "(+XX)"
   /// Example: 05555555555, +555 5555555555, (+123) 5555555555, (555) 5555555555, +5555 5555555555
-  static Pattern phone =
-      r'^0(6|7)\d{8}$';
+  static Pattern phone = r'^(0)[1-9]([-. ]?[0-9]{2}){4}$';
 
   /// Hexadecimal regex
   static Pattern hexadecimal = r'^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$';
